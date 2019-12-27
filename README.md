@@ -1,7 +1,7 @@
 # 概要
 
-takapy0210さんのリポジトリを参考に、適宜自分ように修正しています。
-https://github.com/takapy0210/ml_pipeline
+takapy0210さんのリポジトリを参考に、適宜自分ように修正しています。  
+https://github.com/takapy0210/ml_pipeline  
 タイタニックのデータを用いて、LightGBMとxgboostによる学習・推論の一連の流れが行えるようにしています。
 
 ## 動作検証済み環境
