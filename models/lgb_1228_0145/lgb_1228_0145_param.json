@@ -1,0 +1,44 @@
+{
+    "load_features": [
+        "age_mis_val_median",
+        "family_size",
+        "fare_mis_val_median",
+        "parch",
+        "pclass",
+        "sex_label_encoder",
+        "sibsp"
+    ],
+    "use_features": [
+        "Age_mis_val_median",
+        "Family_Size",
+        "Fare_mis_val_median",
+        "Parch",
+        "Pclass",
+        "sex_label_encoder",
+        "SibSp"
+    ],
+    "model_params": {
+        "boosting_type": "gbdt",
+        "objective": "binary",
+        "metric": "binary_error",
+        "num_class": 1,
+        "num_round": 5000,
+        "early_stopping_rounds": 1000,
+        "verbose": 1000,
+        "random_state": 999
+    },
+    "cv": {
+        "method": "KFold",
+        "n_splits": 3,
+        "random_state": 42,
+        "shuffle": true,
+        "cv_target": "partner_area_cluster"
+    },
+    "dataset": {
+        "run_name": "lgb_1228_0145",
+        "feature_directory": "../data/features/",
+        "target": "Survived",
+        "calc_shap": false,
+        "save_train_pred": false
+    }
+}

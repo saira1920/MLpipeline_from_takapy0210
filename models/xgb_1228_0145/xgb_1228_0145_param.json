@@ -1,0 +1,42 @@
+{
+    "load_features": [
+        "age_mis_val_median",
+        "family_size",
+        "fare_mis_val_median",
+        "parch",
+        "pclass",
+        "sex_label_encoder",
+        "sibsp"
+    ],
+    "use_features": [
+        "Age_mis_val_median",
+        "Family_Size",
+        "Fare_mis_val_median",
+        "Parch",
+        "Pclass",
+        "sex_label_encoder",
+        "SibSp"
+    ],
+    "model_params": {
+        "objective": "binary:logistic",
+        "eval_metric": "logloss",
+        "num_round": 5000,
+        "early_stopping_rounds": 1000,
+        "verbose": 1000,
+        "random_state": 999
+    },
+    "cv": {
+        "method": "KFold",
+        "n_splits": 3,
+        "random_state": 42,
+        "shuffle": true,
+        "cv_target": "partner_area_cluster"
+    },
+    "dataset": {
+        "run_name": "xgb_1228_0145",
+        "feature_directory": "../data/features/",
+        "target": "Survived",
+        "calc_shap": false,
+        "save_train_pred": false
+    }
+}
